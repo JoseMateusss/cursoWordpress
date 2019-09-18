@@ -5,7 +5,7 @@
 	<meta <?php bloginfo('charset')?>>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Yasmim Morais de Vasconcelos">
-	<title></title>
+	<title><?php bloginfo('title');?></title>
 	<!-- Link para a folha de estilo -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/style.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
@@ -36,11 +36,11 @@
 
 		  <div class="collapse navbar-collapse m-3" id="navbarTogglerDemo03">
 		    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-		      <li class="nav-item active">
-		        <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
+		      <li class="nav-item">
+		        <a class="nav-link" href="<?php bloginfo('url'); ?>">Início</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Conheça-nos</a>
+		        <a class="nav-link" href="http://localhost/aeba/conheca-nos/">Conheça-nos</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Associados</a>

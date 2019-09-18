@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<!-- Meta tag obrigatória -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Yasmim Morais de Vasconcelos">
-	<title>Conheça-nos - Associação dos Empresários do Bairro do Alecrim</title>
+<?php
+/** 
+     Template name: conheca-nos
+*/
+?>
 
-	<!-- Link para a folha de estilo -->
-	<link rel="stylesheet" href="assets/css/style.css">
+<?php get_header(); ?>
+
 	
-	<!-- Favicon  -->
-	<link rel="shortcut icon" href="assets/img/favicon_aeba.png">
-	
-	<!-- Links das fontes: Roboto e Open Sans -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-</head>
 <body>
-
 	<!-- Breadcrumb -->
 	<section style="background-color: #e9ecef;">
 		<div class="container max-width" style="max-width: 900px;">
@@ -29,14 +19,15 @@
 			</div>			
 		</div>
 	</section>
-
 	<!-- Sobre -->
 	<section class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12 col-sm-12 pt-4 mx-auto">
 				<h2 class="title pt-3 pb-1">Sobre a AEBA</h2>
+			<?php if(have_posts() ): while(have_posts()): the_post(); ?>
 				<div class="row-title mb-5"></div>
-				<p class="text-flow">A Associação dos Empresários do Bairro do Alecrim - AEBA, foi fundada em 19 de Agosto de 2003.</p>
+				<p class="text-flow"><?php the_content(); ?></p>
+			<?php endwhile; endif;?>
 				<p class="sub-title">A atual diretoria assumiu em junho de 2018 sendo composta pelos seguintes empresários:</p>
 				<ul class="estilo-listagem">
 					<li class="text-flow">Presidente: Pedro Campos de Azevedo, da empresa Campos Equipamentos e Refrigeração.</li>
@@ -46,7 +37,6 @@
 					<li class="text-flow">Primeiro Tesoureiro: Enilvan Rodrigues de Macedo, da empresa Casa Nobre.</li>
 					<li class="text-flow">Segundo Tesoureiro – Marcelo Torres da Costa, da empresa Metal Super.</li>
 				</ul>
-
 				<p class="sub-title">Conselho Fiscal:</p>
 				
 				<ul class="estilo-listagem">
@@ -57,7 +47,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- Objetivos -->
 	<section class="container">
 		<div class="row">
@@ -70,7 +59,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- Missão -->
 	<section class="container">
 		<div class="row">
@@ -81,7 +69,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- Por que se tornar um associado? -->
 	<section class="container">
 		<div class="row">
@@ -104,5 +91,6 @@
 		</div>
 	</section>
 
-</body>
-</html>
+
+
+<?php get_footer(); ?>
